@@ -1,0 +1,144 @@
+// ******** Typographies, variables, tout les réglages généraux **********
+
+@font-face {
+    font-family: "font1";
+    src: url(../fonts/Literata-VariableFont_opsz\,wght.ttf);
+} 
+
+@font-face {
+    font-family: "font2";
+    src: url(../fonts/Literata-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+$font1: font1, sans-serif;
+$font2: font2, sans-serif;
+$color0: rgba(224, 199, 169, 0.938);
+$color1: rgba(1, 133, 156, 0.925); 
+$color2: rgb(19, 19, 19);
+$color3: rgba(20, 20, 20, 0.842);
+$color4: rgba(95, 95, 95, 0.973);
+
+// MIXINS
+@mixin center  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+//Pages HTML5
+html {
+    scroll-behavior: smooth;
+}
+
+//*** En Tête, Descriptions / Index et Préface ***
+// En Tête
+.header-1 {
+    font-size: 3.2rem;
+    margin: 15px;
+    padding: 0 5px 0 15px;
+    text-align: center;
+    box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
+
+    h1, a{
+        color: $color4;
+        transition: 0.7s ease-in-out;
+        text-decoration: none;
+    }
+}
+h4  {
+    font-size: 2rem;
+    text-align: center;
+    color: $color4;
+
+    a {
+        color: $color1;
+        text-decoration: none;
+    }
+}
+h5 {
+    font-size: 1.9rem;
+    text-align: center;
+    color: $color4;
+
+    p {
+        text-align: center;
+        margin: 15px 0 15px 0;
+    }
+}
+
+// Index
+.section-container {
+    display: grid;
+    grid-template-columns: 75% 35%;
+    text-align: justify;
+    margin: 25px 0px 50px 0px;
+    padding: 150px;
+
+    .v-line {
+    border-left: thick solid $color4;
+    height: 180%;
+    left: 50%;
+    position: absolute;
+    }
+    .section-left {
+        justify-content: start;
+        top: 1.5rem
+    }
+    .section-right {
+        justify-content: end;
+        top: 1.5rem
+    }
+
+    h6 {
+        font-family: $font2;
+        font-size: 1.7rem;
+    }
+}
+
+// Préface
+.preface {
+    margin: 25px;
+
+    h5 {
+        text-decoration: underline;
+    }
+}
+
+// ********* BODY ********
+body {
+    background: $color0;
+    margin: 25px;
+    font-family: "font1", sans-serif;
+    width: 90%;
+
+    hr {
+        color: $color3;
+        margin: 50px 0 50px 0;
+    }
+    
+    h3 {
+        font-size: 3rem;
+        color: $color2;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    h2 {
+        font-size: 2.1rem;
+        color: $color1;
+        padding: 0px 0 0 5px;
+    }
+
+    p {
+        font-size: 1.3rem;
+        color: $color3;
+        text-shadow: 0.4px 0.3px 0.2px;
+    }
+    em, i {
+        font-family: $font2;
+    }
+}
+
+
+
